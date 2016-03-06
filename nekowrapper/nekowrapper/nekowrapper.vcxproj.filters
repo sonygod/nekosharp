@@ -9,9 +9,59 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Header Files\Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\VM">
+      <UniqueIdentifier>{702523bc-a471-45cf-b25b-71622585f13f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\alloc.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\builtins.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\callback.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\elf.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\hash.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\interp.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\jit_x86.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\load.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\main.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\module.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\objtable.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\others.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\stats.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vm\threads.c">
+      <Filter>Source Files\VM</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
