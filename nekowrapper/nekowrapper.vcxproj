@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8625241A-496D-45EB-B980-4137D2361656}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>nekowrapper</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.24720.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../libs;../vm;../include;../include/pcre;../include/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;NEKO_STANDALONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../include/zlib/zlib.lib;../include/gc/gc.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)nekowrapper.dll</OutputFile>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)xcross.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>../libs;../vm;../include;../include/pcre;../include/zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;NEKO_STANDALONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../include/zlib/zlib.lib;../include/gc/gc.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)nekowrapper.dll</OutputFile>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\vm\alloc.c" />
+    <ClCompile Include="..\vm\builtins.c" />
+    <ClCompile Include="..\vm\callback.c" />
+    <ClCompile Include="..\vm\hash.c" />
+    <ClCompile Include="..\vm\interp.c" />
+    <ClCompile Include="..\vm\jit_x86.c" />
+    <ClCompile Include="..\vm\load.c" />
+    <ClCompile Include="..\vm\main.c" />
+    <ClCompile Include="..\vm\module.c" />
+    <ClCompile Include="..\vm\objtable.c" />
+    <ClCompile Include="..\vm\others.c" />
+    <ClCompile Include="..\vm\stats.c" />
+    <ClCompile Include="..\vm\threads.c" />
+    <ClCompile Include="..\libs\common\sha1.c" />
+    <ClCompile Include="..\include\pcre\pcre_chartables.c" />
+    <ClCompile Include="..\include\pcre\pcre_compile.c" />
+    <ClCompile Include="..\include\pcre\pcre_config.c" />
+    <ClCompile Include="..\include\pcre\pcre_dfa_exec.c" />
+    <ClCompile Include="..\include\pcre\pcre_exec.c" />
+    <ClCompile Include="..\include\pcre\pcre_fullinfo.c" />
+    <ClCompile Include="..\include\pcre\pcre_get.c" />
+    <ClCompile Include="..\include\pcre\pcre_globals.c" />
+    <ClCompile Include="..\include\pcre\pcre_info.c" />
+    <ClCompile Include="..\include\pcre\pcre_maketables.c" />
+    <ClCompile Include="..\include\pcre\pcre_newline.c" />
+    <ClCompile Include="..\include\pcre\pcre_ord2utf8.c" />
+    <ClCompile Include="..\include\pcre\pcre_refcount.c" />
+    <ClCompile Include="..\include\pcre\pcre_study.c" />
+    <ClCompile Include="..\include\pcre\pcre_tables.c" />
+    <ClCompile Include="..\include\pcre\pcre_try_flipped.c" />
+    <ClCompile Include="..\include\pcre\pcre_ucp_searchfuncs.c" />
+    <ClCompile Include="..\include\pcre\pcre_valid_utf8.c" />
+    <ClCompile Include="..\include\pcre\pcre_version.c" />
+    <ClCompile Include="..\include\pcre\pcre_xclass.c" />
+    <ClCompile Include="..\libs\regexp\regexp.c" />
+    <ClCompile Include="..\libs\std\buffer.c" />
+    <ClCompile Include="..\libs\std\date.c" />
+    <ClCompile Include="..\libs\std\file.c" />
+    <ClCompile Include="..\libs\std\init.c" />
+    <ClCompile Include="..\libs\std\int32.c" />
+    <ClCompile Include="..\libs\std\math.c" />
+    <ClCompile Include="..\libs\std\md5.c" />
+    <ClCompile Include="..\libs\std\memory.c" />
+    <ClCompile Include="..\libs\std\misc.c" />
+    <ClCompile Include="..\libs\std\module.c">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\libs\std\process.c" />
+    <ClCompile Include="..\libs\std\random.c" />
+    <ClCompile Include="..\libs\std\serialize.c" />
+    <ClCompile Include="..\libs\std\socket.c" />
+    <ClCompile Include="..\libs\std\string.c" />
+    <ClCompile Include="..\libs\std\sys.c" />
+    <ClCompile Include="..\libs\std\thread.c" />
+    <ClCompile Include="..\libs\std\utf8.c" />
+    <ClCompile Include="..\libs\std\xml.c" />
+    <ClCompile Include="..\libs\ui\ui.c" />
+    <ClCompile Include="..\libs\zlib\zlib.c" />
+    <ClCompile Include="nekoembed.c" />
+    <ClCompile Include="src\api.c" />
+    <ClCompile Include="src\sys_win.c" />
+    <ClCompile Include="src\xcross.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\vm\neko.h" />
+    <ClInclude Include="..\..\vm\neko_mod.h" />
+    <ClInclude Include="..\..\vm\neko_vm.h" />
+    <ClInclude Include="..\..\vm\objtable.h" />
+    <ClInclude Include="..\..\vm\opcodes.h" />
+    <ClInclude Include="..\..\vm\vm.h" />
+    <ClInclude Include="..\include\pcre\config.h" />
+    <ClInclude Include="..\include\pcre\pcre.h" />
+    <ClInclude Include="..\include\pcre\pcre_internal.h" />
+    <ClInclude Include="..\include\pcre\ucp.h" />
+    <ClInclude Include="..\include\pcre\ucpinternal.h" />
+    <ClInclude Include="..\include\pcre\ucptable.h" />
+    <ClInclude Include="nekoembed.h" />
+    <ClInclude Include="src\sys.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

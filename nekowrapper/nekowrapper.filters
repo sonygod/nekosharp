@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="VM">
+      <UniqueIdentifier>{a49f3cd6-2289-4fd9-b92d-2d96349ca44d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="STD">
+      <UniqueIdentifier>{aa018998-2f2b-4f01-9021-afce84471e28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ZLIB">
+      <UniqueIdentifier>{e7977f5d-00e8-4ab9-88a6-8bc7b1ebc6f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="REGEXP">
+      <UniqueIdentifier>{d79f61b1-4d9f-405f-9dbf-7621424bb37a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="REGEXP\PCRE">
+      <UniqueIdentifier>{c3373d3e-9e20-491d-aa1c-7741fa7cbad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{471e1a57-f515-4db8-a93d-481535cf8266}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\include\pcre\pcre_chartables.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_compile.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_config.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_dfa_exec.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_exec.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_fullinfo.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_get.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_globals.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_info.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_maketables.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_newline.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_ord2utf8.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_refcount.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_study.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_tables.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_try_flipped.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_ucp_searchfuncs.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_valid_utf8.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_version.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\pcre\pcre_xclass.c">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\api.c" />
+    <ClCompile Include="src\sys_win.c" />
+    <ClCompile Include="src\xcross.c" />
+    <ClCompile Include="..\vm\alloc.c" />
+    <ClCompile Include="..\vm\builtins.c" />
+    <ClCompile Include="..\vm\callback.c" />
+    <ClCompile Include="..\vm\hash.c" />
+    <ClCompile Include="..\vm\interp.c" />
+    <ClCompile Include="..\vm\jit_x86.c" />
+    <ClCompile Include="..\vm\load.c" />
+    <ClCompile Include="..\vm\main.c" />
+    <ClCompile Include="..\vm\module.c" />
+    <ClCompile Include="..\vm\objtable.c" />
+    <ClCompile Include="..\vm\others.c" />
+    <ClCompile Include="..\vm\stats.c" />
+    <ClCompile Include="..\vm\threads.c" />
+    <ClCompile Include="..\libs\common\sha1.c" />
+    <ClCompile Include="..\libs\regexp\regexp.c" />
+    <ClCompile Include="..\libs\std\buffer.c" />
+    <ClCompile Include="..\libs\std\date.c" />
+    <ClCompile Include="..\libs\std\file.c" />
+    <ClCompile Include="..\libs\std\init.c" />
+    <ClCompile Include="..\libs\std\int32.c" />
+    <ClCompile Include="..\libs\std\math.c" />
+    <ClCompile Include="..\libs\std\md5.c" />
+    <ClCompile Include="..\libs\std\memory.c" />
+    <ClCompile Include="..\libs\std\misc.c" />
+    <ClCompile Include="..\libs\std\module.c" />
+    <ClCompile Include="..\libs\std\process.c" />
+    <ClCompile Include="..\libs\std\random.c" />
+    <ClCompile Include="..\libs\std\serialize.c" />
+    <ClCompile Include="..\libs\std\socket.c" />
+    <ClCompile Include="..\libs\std\string.c" />
+    <ClCompile Include="..\libs\std\sys.c" />
+    <ClCompile Include="..\libs\std\thread.c" />
+    <ClCompile Include="..\libs\std\utf8.c" />
+    <ClCompile Include="..\libs\std\xml.c" />
+    <ClCompile Include="..\libs\ui\ui.c" />
+    <ClCompile Include="..\libs\zlib\zlib.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\vm\neko.h">
+      <Filter>VM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vm\neko_mod.h">
+      <Filter>VM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vm\neko_vm.h">
+      <Filter>VM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vm\objtable.h">
+      <Filter>VM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vm\opcodes.h">
+      <Filter>VM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\vm\vm.h">
+      <Filter>VM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\pcre\config.h">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\pcre\pcre.h">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\pcre\pcre_internal.h">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\pcre\ucp.h">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\pcre\ucpinternal.h">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\pcre\ucptable.h">
+      <Filter>REGEXP\PCRE</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sys.h" />
+  </ItemGroup>
+</Project>
